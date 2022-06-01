@@ -1,10 +1,12 @@
 # -*- encoding: utf-8 -*-
 """
+
 股权穿透demo
 
 处理原始csv文件,使其格式符合neo4j-admin import数据导入工具。
 原始数据文件存放在data_sample。
-经过处理的数据文件存放在neo4j_import_data。
+经过处理的数据文件存放在neo4j_import_data中。
+
 """
 
 import pandas as pd
@@ -65,6 +67,7 @@ def data_process():
     corp_rel_df.to_csv(os.path.join(save_path, corp_rel_path.split("/")[-1]), index=False)
 
     print("Done!")
+
 
 
 if __name__ == '__main__':
